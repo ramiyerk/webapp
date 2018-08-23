@@ -11,7 +11,7 @@ stage('Build') {
 }
 stage('Package') {
    sshagent(['tomcat-dev']) {
-    sh 'scp -o StrictHostKeyChecking=no target/*.war anup@172.31.31.71:/opt/apache-tomcat-9.0.11/webapps/''
+    sh 'scp -o StrictHostKeyChecking=no target/*.war anup@172.31.31.71:/opt/apache-tomcat-9.0.11/webapps/'
 }
 
 }
