@@ -10,10 +10,8 @@ stage('Build') {
 }
 
 }
-stage('Deploy') {
-	
-		sh 'sudo cp target/*.war /var/lib/tomacat8/webapps/'	
- 
+stage('Deploy') {	
+	sh 'sudo cp target/*.war /var/lib/tomacat8/webapps/'	
 	}	
 
 
