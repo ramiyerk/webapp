@@ -10,7 +10,7 @@ node {
  	}	
  	}	
  	stage('Package-Deploy') {	
-  	sshagent(['ec2']) {
+  sshagent(['pipe']) {
  	sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@172.31.41.209:/var/lib/tomacat8/webapps/'	
  	}	
  	}	
