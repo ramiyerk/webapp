@@ -5,9 +5,11 @@ node {
     
 }
 stage('Build') {
-   def mvnHome=tool name: 'apache-maven-3.5.4', type: 'maven'
- sh '${mvnHome}/bin/mvn package'
+   def mvn_version = 'maven'	
+ 	withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {	
+ 	sh "mvn clean package"	 
 
+   }
 }
 stage('Package') {
    sshagent(['tomcat-dev']) {
