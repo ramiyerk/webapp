@@ -18,16 +18,19 @@
   <build>
     <finalName>WebApp</finalName>
   </build>
-  <distributionManagement>	
- 	<repository>	
- 	<id>Test</id> 	
- 	<name>Test</name>	
- 	<url>http://localhost:8081/repository/Test/</url>	
- 	</repository>	
- 	 	
- 
- 	
- 	</distributionManagement>	 
+<distributionManagement>	
+<repository>	
+<id>demo</id>
+	<name>Demo</name>	
+<url>http://localhost:8081/repository/Test/</url>	
+</repository>	
+<snapshotRepository>	
+<id>snapshots</id>	
+<name>Snapshots</name>	
+<url>http://localhost:8081/repository/Snapshots/</url>	
+</snapshotRepository>	
+</distributionManagement>	 
  
+
 
 </project>
